@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Yuze-L">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://yuze-l.github.io/2024/02/04/gwas/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Yuze&#39;s Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GWAS &amp; Mendelian Randomization">
+<meta property="og:url" content="https://yuze-l.github.io/2024/02/04/GWAS/index.html">
+<meta property="og:site_name" content="Yuze-L">
+<meta property="og:description" content="Yuze&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yuze-l.github.io/images/about_self.png">
+<meta property="article:published_time" content="2024-02-03T16:03:09.000Z">
+<meta property="article:modified_time" content="2025-06-28T15:30:35.880Z">
+<meta property="article:author" content="Yuze-L">
+<meta property="article:tag" content="bioinformatics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuze-l.github.io/images/about_self.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.jpg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/avatar.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            GWAS &amp; Mendelian Randomization | Yuze&#39;s Blog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"yuze-l.github.io","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/about_self.png","description":"Yuze's Blog"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Welcome to Yuze's Blog","subtitle":{"text":["Loading..."],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn?c=i"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Yuze-L","instagram":null,"zhihu":null,"twitter":null,"email":"yuze_lin@outlook"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"tags":{"icon":"fa-solid fa-tags","path":"/tags/"},"categories":{"icon":"fa-solid fa-folder","path":"/categories/"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/Yuze-L","Links":"/links"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"INTO THE UNKNOWN","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/9/15 22:45:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Yuze&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags/"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    TAGS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories/"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    CATEGORIES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/Yuze-L">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/links">
+                                                    LINKS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags/"
+                        >
+                            <span>
+                                TAGS
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories/"
+                        >
+                            <span>
+                                CATEGORIES
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/Yuze-L">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links">LINKS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">GWAS &amp; Mendelian Randomization</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/avatar.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Yuze-L</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-02-04 00:03:09</span>
+        <span class="mobile">2024-02-04 00:03:09</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-06-28 23:30:35</span>
+            <span class="mobile">2025-06-28 23:30:35</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Lab/">Lab</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Lab/Chinese/">Chinese</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/bioinformatics/">bioinformatics</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>15 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>参考</p>
+
+    </div>
+    <div class="notel-content">
+      <ul>
+<li><a class="link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/72490817">https://zhuanlan.zhihu.com/p/72490817<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://www.cnblogs.com/leezx/p/9013615.html">https://www.cnblogs.com/leezx/p/9013615.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://dengfei2013.gitee.io/gwas-data-analysis/gwas%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD.html#gwas%E5%88%86%E6%9E%90%E7%9A%84%E6%80%A7%E7%8A%B6%E5%92%8C%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B">https://dengfei2013.gitee.io/gwas-data-analysis/gwas%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD.html#gwas%E5%88%86%E6%9E%90%E7%9A%84%E6%80%A7%E7%8A%B6%E5%92%8C%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+
+    </div>
+  </div>
+
+<!-- 
+  <div class="note p-4 mb-4 rounded-small orange icon-padding">
+    <i class="note-icon fa-solid fa-bolt"></i><p>2024年2月6日</p>
+
+  </div> -->
+<h2 id="TARGET"><a href="#TARGET" class="headerlink" title="TARGET"></a>TARGET</h2><p>利用PLINK进行GWAS研究，找出遗传区域和性状/疾病之间的关联，从而找出与暴露因素存在直接关联，与混杂因素和结果没有关系的工具变量</p>
+<p>采用遗传位点作为分析工具的最主要原因——不可改变性。遗传位点在受精时就已经确定。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://p5.itc.cn/q_70/images03/20230414/fcd1e14c3e5f4161a09310e66c69c84f.png" alt="研究示意图"></p>
+<p>基因型（工具变量）还需要满足以下条件：</p>
+<blockquote>
+<p>工具变量这个概念居然是最先在计量经济学中发生应用的orz</p>
+</blockquote>
+<ul>
+<li><p>工具变量（基因型）需要与暴露因素X（表型）强相关（假设1，关联性假设，相关系数＞0.8）。如果使用弱工具变量，所得结果容易出现偏倚。</p>
+</li>
+<li><p>工具变量不能与其它任何可能的混杂因素相关(假设2，独立性假设)。例如：性别、年龄、体重等用于人群分层的因素需要剔除。</p>
+</li>
+<li><p>工具变量（基因型）不能与结果直接相关(假设3，排他性限制，工具变量只可以通过暴露因素影响结局)。其他可能影响因素的包括多效性等。</p>
+</li>
+<li><p>其他假设：不存在选型交配。</p>
+</li>
+</ul>
+<blockquote>
+<p>关于孟德尔随机化待阅读<a class="link" target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8546498/">Strengthening the reporting of observational studies in epidemiology using mendelian randomisation (STROBE-MR): explanation and elaboration<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="CONCEPTS"><a href="#CONCEPTS" class="headerlink" title="CONCEPTS"></a>CONCEPTS</h2><h3 id="SNP"><a href="#SNP" class="headerlink" title="SNP"></a>SNP</h3><ul>
+<li><p>Single-Nucleotide Polymorphism</p>
+</li>
+<li><p>DNA序列中单个核苷酸的替代导致的、且分布于种群中相当一部分个体（如：1%以上）中的基因多样性。例如，对于某种生物，同一位置基因组片段一部分为AAGCCTA，另一部分为AAGCTTA，则认为此处存在SNP、两种基因型属于等位基因。</p>
+</li>
+</ul>
+<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><h4 id="ped-files"><a href="#ped-files" class="headerlink" title=".ped files"></a>.ped files</h4><p>The PED file is a <strong>white-space (space or tab)</strong> delimited file: the first six columns are mandatory:</p>
+<blockquote>
+<p>   Family ID<br>     Individual ID<br>     Paternal ID<br>     Maternal ID<br>     Sex (1=male; 2=female; other=unknown)<br>     Phenotype</p>
+</blockquote>
+<p>A PED file must have <strong>1 and only 1</strong> phenotype in the sixth column. The phenotype can be either a quantitative trait or an affection status column</p>
+<p>Genotypes (column 7 onwards) should also be white-space delimited; they can <strong>be any characte</strong>r (e.g. 1,2,3,4 or A,C,G,T or anything else) <strong>except 0</strong> which is, by default, the missing genotype character. <strong>All markers should be biallelic</strong>. All SNPs (whether haploid or not) must have two alleles specified. Either Both alleles should be missing (i.e. 0) or neither. No header row should be given. For example, here are two individuals typed for 3 SNPs (one row = one person):</p>
+<h4 id="map-files"><a href="#map-files" class="headerlink" title=".map files"></a>.map files</h4><p>By default, each line of the MAP file describes a single marker and must contain exactly 4 columns:</p>
+<blockquote>
+<pre><code>chromosome (1-22, X, Y or 0 if unplaced)
+rs# or snp identifier
+Genetic distance (morgans)
+Base-pair position (bp units)
+</code></pre>
+</blockquote>
+<ul>
+<li><code>--map3</code>可以去除Genetic distance</li>
+</ul>
+<h4 id="frq"><a href="#frq" class="headerlink" title=".frq"></a>.frq</h4><blockquote>
+<p>   CHR       Chromosome<br>     SNP       SNP identifier<br>     A1        Allele 1 code (<strong>minor allele</strong>)<br>     A2        Allele 2 code (<strong>major allele</strong>)<br>     MAF       Minor allele frequency<br>     NCHROBS   Non-missing allele count</p>
+</blockquote>
+<h4 id="assoc"><a href="#assoc" class="headerlink" title=".assoc"></a>.assoc</h4><blockquote>
+<p>   CHR     Chromosome<br>     SNP     SNP ID<br>     BP      Physical position (base-pair)<br>     A1      Minor allele name (based on whole sample)<br>     F_A     Frequency of this allele in cases<br>     F_U     Frequency of this allele in controls<br>     A2      Major allele name<br>     CHISQ   Basic allelic test chi-square (1df)<br>     P       Asymptotic p-value for this test<br>     OR      Estimated odds ratio (for A1, i.e. A2 is reference)</p>
+</blockquote>
+<h4 id="model"><a href="#model" class="headerlink" title=".model"></a>.model</h4><blockquote>
+<p>   CHR           Chromosome number<br>     SNP           SNP identifier<br>     TEST          Type of test<br>     AFF           Genotypes/alleles in cases<br>     UNAFF         Genotypes/alleles in controls<br>     CHISQ         Chi-squated statistic<br>     DF            Degrees of freedom for test<br>     P             Asymptotic p-value</p>
+</blockquote>
+<h3 id="MAF"><a href="#MAF" class="headerlink" title="MAF"></a>MAF</h3><p>MAF: 最小等位基因频率</p>
+<blockquote>
+<p>最小等位基因频率怎么计算？比如一个位点有AA或者AT或者TT，那么就可以计算A的基因频率和T的基因频率，qA + qT = 1，这里谁比较小，谁就是最小等位基因频率，比如qA = 0.3, qT = 0.7， 那么这个位点的MAF为0.3. 之所以用这个过滤标准，是因为MAF如果非常小，比如低于0.02，<strong>那么意味着大部分位点都是相同的基因型，这些位点贡献的信息非常少，增加假阳性。</strong>更有甚者MAF为0，那就是所有位点只有一种基因型，这些位点没有贡献信息，放在计算中增加计算量，没有意义，所以要根据MAF进行过滤。</p>
+</blockquote>
+<h2 id="GWAS"><a href="#GWAS" class="headerlink" title="GWAS"></a>GWAS</h2><ul>
+<li>Genome-wide association studies</li>
+<li>用于识别遗传区域（基因组）和性状/疾病之间关联的方法。<br><img lazyload="" src="/images/loading.svg" data-src="https://pic4.zhimg.com/80/v2-edf3feff8d38ad99dbca23ea7777fa33_1440w.webp" alt="GWAS简单示意图"></li>
+</ul>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>基本步骤</p>
+
+    </div>
+    <div class="notel-content">
+      <p><a class="link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/667352071">GWAS系列 | 带你读懂全基因组关联研究(一)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<ol>
+<li>从一组受试者中收集其DNA和表型信息（如患病情况以及年龄、性别等人口统计学信息）</li>
+</ol>
+<p>GWAS通常需要<strong>非常大的样本量</strong>来确定可被复现的全基因组显著关联，研究者可以使用CaTS或GPC等工具中的功效分析功能来所需的样本量。研究所关注的表型可以是二分类的病例-对照类型，也可以是定量测量的性状。</p>
+<ol start="2">
+<li>基因分型</li>
+</ol>
+<p>目前，对个体进行基因分型的方法主要包括微型阵列（针对常见变异）和下一代测序技术（如WES、WGS等，可用于研究稀有变异）。较长一段时间以来，由于NGS的成本较高，基于微阵列的基因分型技术往往是GWAS研究中更为常用的选择。当然，理想情况下，与WES和微阵列相比，WGS理应是基因分型的首选办法，因为它几乎能够鉴定全基因组范围内的每个基因型，而随着该技术的日益普及，WGS有望在未来成为主流选择。</p>
+<ol start="3">
+<li>质量控制与数据清洗</li>
+</ol>
+<p>GWAS分析所需要的数据包括匿名的个体ID、个体间的家庭关系信息、性别、表型、协变量、全基因组的基因分型信息以及基因分型的批次信息等。对上述的输入数据进行严格的质量控制，是后续GWAS分析得到可靠结果的前提。通常来说，<strong>GWAS的数据清洗和质控流程主要包括：去除稀有变异、过滤不处于哈温平衡（Hardy–Weinberg equilibrium）的位点、去除个体缺失率较高的位点、识别并去除基因分型的错误、控制人群分层等。</strong></p>
+<p>在对GWAS阵列数据进行样本和变异位点的质量控制后，通常需要进一步开展人群phasing，并基于单倍型参考序列集（reference panel）进行基因型推断（imputation）。在这一环节中，常见的参考序列集可来自千人基因组计划或TOPMed项目。</p>
+<p>此外，血统和亲缘关系也是GWAS质量控制流程中的一个重要考虑因素，特别是对于纳入了多个不同背景的参与者的数据集来说，这是为了避免由于人群分层而产生的假阳性遗传信号以及偏倚的关联统计量。在GWAS研究中，通常采用主成分分析的方法，首先基于所有个体的基因型数据来划分具有相似遗传信息的群体，然后将基因型主成分作为协变量纳入到后续的回归模型中，从而校正人群分层。</p>
+<ol start="4">
+<li>开展关联统计检验</li>
+</ol>
+<p>在当前步骤中，对于连续型表型（如身高、血压、BMI等）和二分类表型（如是否患病），我们分别采用线性回归和logistic回归模型来检验相关性。同时，为了避免人群分层和其他人口统计学因素所带来的混杂影响，需要纳入诸如年龄、性别、主成分等协变量对回归模型进行校正。此外，线性和logistic混合模型（可利用fastGWAS等工具实现）额外纳入了亲缘关系作为随机效应项，既能提高关联统计检验的效力，还能有效控制人群分层。</p>
+<ol start="5">
+<li>开展GWAS荟萃分析</li>
+</ol>
+<p>结合多个队列的GWAS汇总统计结果，Meta分析可以基于固定效应模型或随机效应模型来检验异质性（例如检测某个队列的关联结果是否偏离于其他队列），并根据样本量大小，通过逆方差法对每个独立人群的结果进行加权，最终计算出一个更为准确的、综合的关联效应量。</p>
+<ol start="6">
+<li>在独立验证人群中复现关联结果</li>
+</ol>
+<p>在GWAS研究中，比较发现队列和独立验证队列之间的关联效应量往往是确定可靠的“变异-表型“关联的金标准。需要注意的是，验证队列必须完全独立于发现队列，即两个队列间不能存在共有的个体或亲缘上的关系。</p>
+<ol start="7">
+<li>开展各类后续分析来对GWAS结果进行解释（可选）</li>
+</ol>
+
+    </div>
+  </div>
+
+<h3 id="Manhattan-Plot"><a href="#Manhattan-Plot" class="headerlink" title="Manhattan Plot"></a>Manhattan Plot</h3><p>A Manhattan plot is a type of plot, usually used to display data with a large number of data-points, many of non-zero amplitude, and with a distribution of higher-magnitude values. The plot is commonly used in genome-wide association studies (GWAS) to display significant SNPs.</p>
+<p>在 GWAS 曼哈顿图中，基因组坐标沿 x 轴显示，每个单核苷酸多态性 (SNP) 的关联 p 值的负对数显示在 y 轴上，这意味着曼哈顿图上的每个点表示一个单核苷酸多态性。由于最强的关联具有最小的 p 值（例如 10 −15 ），因此它们的负对数将是最大的（例如 15）。每个块的不同颜色通常显示每个染色体的范围。</p>
+<blockquote>
+<p>关联性强的SNP的P_值会比较的小，从而像Manhattan里的摩天大楼高耸入云。</p>
+</blockquote>
+
+  <div class="note p-4 mb-4 rounded-small blue icon-padding">
+    <i class="note-icon fa-solid fa-question-circle"></i><p>还是没看懂为什么需要作这个Manhattan Plot</p>
+
+  </div>
+
+<h2 id="PLINK"><a href="#PLINK" class="headerlink" title="PLINK"></a>PLINK</h2><ul>
+<li>GWAS分析工具</li>
+</ul>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>Commands</p>
+
+    </div>
+    <div class="notel-content">
+      <p><a class="link" target="_blank" rel="noopener" href="https://zzz.bwh.harvard.edu/plink/reference.shtml">Command Reference Table<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+
+    </div>
+  </div>
+
+<h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>按照知乎的教程，先是下载下载下来<code>example.zip</code></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载测试数据，进入目录环境</span></span><br><span class="line">$ wget http://zzz.bwh.harvard.edu/plink/dist/example.zip</span><br><span class="line">$ unzip example.zip</span><br><span class="line">$ <span class="built_in">cd</span> example/</span><br><span class="line"><span class="comment">#检查 ped文件和map文件的存在</span></span><br><span class="line">$ plink --file wgas1</span><br><span class="line"><span class="comment">#生成二进制的ped文件（fam bed bai)</span></span><br><span class="line">$ plink --file wgas1 --make-bed --out wgas1</span><br><span class="line"><span class="comment"># 如果想生成一个高质量的样本集（个体SNP完整度在95%） 可以加一个参数 "--mind 0.05"</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>--file</code>读取<code>.ped</code>和<code>.map</code>文件</li>
+<li><code>--make-bed</code> 指令可以得到<code>.ped</code>和<code>.map</code>文件的二进制格式（按照官方的说法，二进制读取大文件更快更稳定一点）<ul>
+<li>Make <code>.bed</code>, <code>.fam</code> and <code>.bim</code></li>
+</ul>
+</li>
+<li><code>--out {plink}</code> Specify output root filename</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://pic3.zhimg.com/80/v2-33fe6a11fd2f3d5004eaa30437ae6ade_1440w.webp" alt="plink输入文件格式"></p>
+<h3 id="QC"><a href="#QC" class="headerlink" title="QC"></a>QC</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 样本缺失率和位点缺失率过滤</span></span><br><span class="line"><span class="comment"># 可以按染色体分别进行,加 "--chr 1" option</span></span><br><span class="line">$ plink --bfile wgas1 --missing --out miss_stat</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">head</span> miss_stat.imiss</span><br><span class="line">$ <span class="built_in">head</span> miss_stat.lmiss</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>--bfile {plink}</code>  Specify <code>.bed</code>, <code>.fam</code> and <code>.bim</code></li>
+<li><code>--missing</code> Reporting summary statistics -&gt; Missing rates (per individual, per SNP)<ul>
+<li><code>.imss</code> 是 Missing rates, per individual</li>
+<li><code>.lmiss</code> 是 Missing rates, per locus(基因座)</li>
+</ul>
+</li>
+<li>missing individuals (N MISS) and the proportion of individuals missing (F MISS)</li>
+</ul>
+<h4 id="MAF计算"><a href="#MAF计算" class="headerlink" title="MAF计算"></a>MAF计算</h4><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAF 计算</span></span><br><span class="line">$ plink --bfile wgas1 --freq --out freq_stat</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">head</span> freq_stat.frq</span><br><span class="line">$ <span class="built_in">head</span> pop.cov</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cut</span> -d <span class="string">" "</span>  -f 3 pop.cov |<span class="built_in">sort</span> |<span class="built_in">uniq</span> -c</span><br><span class="line"></span><br><span class="line">$ plink --bfile wgas1 --within pop.cov --freq --out freq_stat</span><br><span class="line"><span class="comment"># 输出文件 freq_stat.frq.strat</span></span><br><span class="line"><span class="comment">#显示在不同组种snp的MAF</span></span><br><span class="line">$ <span class="built_in">head</span> freq_stat.frq.strat</span><br><span class="line"><span class="comment"># 加参数 "--snp rs1891905" 看特定snp的MAF</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这段代码有一点点复杂orz</p>
+</blockquote>
+<ul>
+<li><code>--freq</code> 等位基因频率表, <code>.frq</code></li>
+<li>cut 分割 | sort 排序 | uniq 去重</li>
+<li><code>--within</code> Stratify frequencies and missing rates by clusters<ul>
+<li>要生成按分类聚类变量分层的等位基因频率摘要，请使用 <code>--within 文件名</code>选项以及 <code>--missing</code> 。这样，将分别给出分类变量的每个级别的频率。</li>
+<li>按照<code>pop.cov</code>的聚类结果计算frequencies和missing_rate</li>
+</ul>
+</li>
+</ul>
+<h3 id="PCA-主成分分析"><a href="#PCA-主成分分析" class="headerlink" title="PCA 主成分分析"></a>PCA 主成分分析</h3>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>为什么要进行PCA？</p>
+
+    </div>
+    <div class="notel-content">
+      <p>GWAS研究时经常碰到群体分层的现象，即该群体的祖先来源多样性，我们知道的，不同群体SNP频率不一样，导致后面做关联分析的时候可能出现假阳性位点（不一定是显著信号位点与该表型有关，可能是与群体SNP频率差异有关），因此我们<strong>需要在关联分析前对该群体做PCA分析，随后将PCA结果作为协变量加入关联分析中。</strong></p>
+
+    </div>
+  </div>
+
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ plink --bfile wgas1 --pca 10 --out wgas1_pca</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>为什么没有在Command Table中找到<code>--pca</code>这个选项orz</p>
+</blockquote>
+<h3 id="关联分析"><a href="#关联分析" class="headerlink" title="关联分析"></a>关联分析</h3><ul>
+<li>查看每个为点和表型的关联度</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.639ex" height="2.71ex" role="img" focusable="false" viewBox="0 -948 2492.6 1198"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mtext" fill="red" stroke="red"><path data-c="5C" d="M56 731Q56 740 62 745T75 750Q85 750 92 740Q96 733 270 255T444 -231Q444 -239 438 -244T424 -250Q414 -250 407 -240Q404 -236 230 242T56 731Z"></path><path data-c="43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z" transform="translate(500,0)"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(1222,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(1778,0)"></path></g><g data-mml-node="mn" transform="translate(2089,477.1) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container> 分布</li>
+<li>输出<code>*.assoc</code></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://zzz.bwh.harvard.edu/plink/anal.shtml">Basic case/control association test<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ plink --bfile wgas1 --assoc --out as1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对于小样本，最好考虑FDR校正（用assoc模式，CHI值使用皮尔森卡方来计算；如果改用--fisher 模式，则用 Fisher's exact test来算）</span></span><br><span class="line"><span class="comment"># 输出文件 *.assoc (和不加--adjust的结果一样） + *.assoc.adjusted</span></span><br><span class="line">$ plink --bfile wgas1 --assoc --adjust --out as2</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="细化分析"><a href="#细化分析" class="headerlink" title="细化分析"></a>细化分析</h4><p>Cochran-Armitage 趋势检验要求一个变量是有序分类变量，另一个变量是二分类变量（此处可看为case组和control组），常用来说明某一事件发生率是否随着原因变量的变化而呈线性趋势。</p>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>Cochran-Armitage检验</p>
+
+    </div>
+    <div class="notel-content">
+      <p>参见 <a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cochran%E2%80%93Armitage_test_for_trend">Cochran–Armitage test for trend<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<ul>
+<li>is used in categorical data analysis when the aim is to assess for the presence of an association between a variable with two categories and an ordinal variable with k categories.<br>t</li>
+</ul>
+
+    </div>
+  </div>
+
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># model 的模式，一次性进行多项检验</span></span><br><span class="line"><span class="comment">#We can calculate association statistics based on the 2-by-3 genotype table as well as the standard allelic test;</span></span><br><span class="line"><span class="comment">#we can also calculate tests that assume dominant or recessive action of the minor allele; finally, we can perform </span></span><br><span class="line"><span class="comment">#the Cochran-Armitage trend test</span></span><br><span class="line"><span class="comment"># 可以设定 --snp rs**** 对单个位点进行计算，也可以全部位点一起算</span></span><br><span class="line">$ plink --bfile wgas1 --model --out mod1</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>这里的<code>--model</code>专指这个 Cochran-Armitage检验</li>
+</ul>
+<h4 id="分层分析"><a href="#分层分析" class="headerlink" title="分层分析"></a>分层分析</h4><ul>
+<li>IBS聚类</li>
+<li>complete linkage agglomerative clustering, based on <em><strong>pairwise</strong></em> <strong>identity-by-state (IBS)</strong> distance, but with some modifications to the clustering process: restrictions based on a significance test for whether two individuals belong to the <strong>same population</strong> (i.e.<br>do not merge clusters that contain significantly different individuals) , <strong>a phenotype criterion</strong> (i.e. all pairs must contain at least one case and one control) and <strong>cluster size restrictions</strong> (i.e.<br>such that, with a cluster size of 2, for example, the subsequent association test would implicitly match every case with its nearest control, as long as the case and control do not show evidence of belonging to different populations).</li>
+</ul>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --mc 2 意思是两两成对  -ppc 设定pvalue的阈值</span></span><br><span class="line">$ plink --bfile wgas1 --cluster --mc 2 --ppc 0.05 --out str1</span><br><span class="line"><span class="comment"># $ plink --bfile wgas1 --cluster --matrix --out ibd_view 之后可以用R画PCA的图</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="关联分析-分组"><a href="#关联分析-分组" class="headerlink" title="关联分析-分组"></a>关联分析-分组</h4><p><a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cochran%E2%80%93Mantel%E2%80%93Haenszel_statistics">Cochran-Mentel-Haenszel (CMH) association statistics<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<ul>
+<li>a test used in the analysis of stratified or matched categorical data. It allows an investigator to test the association between a binary predictor or treatment and a binary outcome such as case or control status while taking into account the stratification.</li>
+</ul>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --mh approach is no longer available (this applies only to case/control samples)</span></span><br><span class="line">$ plink --bfile wgas1 --mh --within str1.cluster2 --adjust --out aac1</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="一些感想"><a href="#一些感想" class="headerlink" title="一些感想"></a>一些感想</h2><blockquote>
+<p>按照知乎的教程学完了…感觉学习了很多东西，但是又好像什么都没学orz<br>熟练了<code>bash</code>操作<br>可能还是得在实际应用中对照着Command Doc来进一步熟练</p>
+</blockquote>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> GWAS &amp; Mendelian Randomization</li>
+        <li><strong>Author:</strong> Yuze-L</li>
+        <li><strong>Created at
+                :</strong> 2024-02-04 00:03:09</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-06-28 23:30:35
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://yuze-l.github.io/2024/02/04/GWAS/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/bioinformatics/">#bioinformatics</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/02/23/organic-chem/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">有机化学学习经验</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2023/10/24/AI_INTRO-1/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Heuristic &amp; Adversarial Search, Supervised Machine Learning</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">GWAS &amp; Mendelian Randomization</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TARGET"><span class="nav-text">TARGET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCEPTS"><span class="nav-text">CONCEPTS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SNP"><span class="nav-text">SNP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAF"><span class="nav-text">MAF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GWAS"><span class="nav-text">GWAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Manhattan-Plot"><span class="nav-text">Manhattan Plot</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PLINK"><span class="nav-text">PLINK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Preparation"><span class="nav-text">Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QC"><span class="nav-text">QC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PCA-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90"><span class="nav-text">PCA 主成分分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90"><span class="nav-text">关联分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3"><span class="nav-text">一些感想</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yuze-L</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        10 posts in total
+                    </span>
+                    
+                        <span>
+                            13.4k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
